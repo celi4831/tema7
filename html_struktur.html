@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400ppx, 1fr));
+            grid-gap: 20px;
+        }
+
+        article {
+            border: 1px solid;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        header,
+        footer {
+            text-align: center;
+        }
+
+        header,
+        footer {
+            padding: 10px 0;
+            border: 1px solid;
+        }
+
+        h2 {
+            padding-left: 50px;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <header>Title</header>
+
+    <main>
+
+        <h2>Undertitle</h2>
+
+        <section>
+            <article>
+                <img src="https://placeimg.com/640/480/any" alt="">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo molestiae vitae autem ipsum tenetur libero a tempora, harum ratione incidunt numquam fugiat delectus eos. Deleniti assumenda, esse fugiat alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero placeat, eveniet omnis earum aut quae quibusdam aperiam nulla officia et. Quos ratione facere sit veritatis nobis voluptatibus, perferendis, optio ex.</p>
+            </article>
+            <article>
+                <img src="https://placeimg.com/640/480/any" alt="">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo molestiae vitae autem ipsum tenetur libero a tempora, harum ratione incidunt numquam fugiat delectus eos. Deleniti assumenda, esse fugiat alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero placeat, eveniet omnis earum aut quae quibusdam aperiam nulla officia et. Quos ratione facere sit veritatis nobis voluptatibus, perferendis, optio ex.</p>
+            </article>
+
+        </section>
+
+
+
+        <footer>This is footer</footer>
+
+
+        <script>
+            const title = document.querySelector("header");
+            console.log(title);
+            title.innerHTML = "<h1>Title</h1>";
+
+        </script>
+
+    </main>
+</body>
+
+</html>
