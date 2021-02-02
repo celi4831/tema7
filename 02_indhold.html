@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400ppx, 1fr));
+            grid-gap: 20px;
+        }
+
+        article {
+            border: 1px solid;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        header,
+        footer {
+            text-align: center;
+        }
+
+        header,
+        footer {
+            padding: 10px 0;
+            border: 1px solid;
+        }
+
+        h2 {
+            padding-left: 50px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Title</h1>
+    </header>
+
+    <main>
+
+        <h2>Undertitle</h2>
+
+        <section>
+            <article>
+                <img src="https://placeimg.com/640/480/any" alt="" class="first">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo molestiae vitae autem ipsum tenetur libero a tempora, harum ratione incidunt numquam fugiat delectus eos. Deleniti assumenda, esse fugiat alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero placeat, eveniet omnis earum aut quae quibusdam aperiam nulla officia et. Quos ratione facere sit veritatis nobis voluptatibus, perferendis, optio ex.</p>
+            </article>
+            <article>
+                <img src="https://placeimg.com/640/480/any" alt="" class="second">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illo molestiae vitae autem ipsum tenetur libero a tempora, harum ratione incidunt numquam fugiat delectus eos. Deleniti assumenda, esse fugiat alias. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero placeat, eveniet omnis earum aut quae quibusdam aperiam nulla officia et. Quos ratione facere sit veritatis nobis voluptatibus, perferendis, optio ex.</p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>This is footer</footer>
+
+
+    <script>
+        const overskrift = document.querySelector("h1");
+        overskrift.textContent;
+        console.log(overskrift.textContent);
+        overskrift.textContent = "Billeder";
+        console.log(overskrift.textContent);
+
+        const article1 = document.querySelector("article:nth-child(1) h3");
+        article1.textContent = "Flotte billeder";
+        const article2 = document.querySelector("article:nth-child(2) h3");
+        article2.textContent = "Anderledes billeder";
+
+        const artikel1 = document.querySelector("article:nth-child(1) p");
+        artikel1.textContent = "Her er et billede af noget random";
+        const artikel2 = document.querySelector("article:nth-child(2) p");
+        artikel2.innerHTML = "Her er et billede af noget andet <b>random</b>";
+
+        const pic1 = document.querySelector("article:first-child img");
+        console.log(pic1);
+        pic1.alt = "random billede"
+
+        const pic2 = document.querySelector("article:second-child img");
+        console.log(pic2);
+        pic1.alt = "random billede"
+
+        const footer = document.querySelector("footer");
+        console.log(footer);
+
+    </script>
+
+
+</body>
+
+</html>
