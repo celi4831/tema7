@@ -3,14 +3,63 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Persongalleri</title>
-    <link rel="stylesheet" href="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+            margin: 30px;
+        }
+
+        article {
+            border: 2px solid black;
+            border-radius: 25px;
+            padding: 1rem;
+        }
+
+        img {
+            border-radius: 25px;
+        }
+
+        h1 {
+            margin: 20px;
+            margin-left: 30px;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>Persongalleri</h1>
+
+    <main></main>
+
+    <section>
+        <template>
+            <article>
+                <img scr="" alt="" class="billede">
+                <h2 class="navn">Navn:</h2>
+                <p class="efternavn">Efternavn:</p>
+                <p class="hobby">Hobby:</p>
+                <p class="troende">Troende:</p>
+            </article>
+        </template>
+    </section>
+
+
     <script>
         const url = "https://persongalleri-5d3e.restdb.io/rest/persongalleri";
+
+        const medieurl = "https://persongalleri-5d3e.restdb.io/media/";
 
         const options = {
             headers: {
@@ -21,15 +70,25 @@
         async function hentData() {
             const resspons = await fetch(url, options);
             const json = await resspons.json();
+            vis(json);
         }
+
+        const main = document.querySelector("main");
+        const template = document.querySelector("template").content;
 
         function vis(json) {
             console.log(json);
+            json.forEach(person => {
+                const klon = template.cloneNode(true);
+                klon.querySelector(".billede").src = medieurl + person.billede;
+                klon.querySelector(".navn").textContent = `${"Navn: "}` + person.navn;
+                klon.querySelector(".efternavn").textContent = `${"Efternavn: "}` + person.efternavn;
+                klon.querySelector(".hobby").textContent = `${"Hobby: "}` + person.hobby;
+                klon.querySelector(".troende").textContent = `${"Troende: "}` + person.troende;
+                main.appendChild(klon);
+            })
         }
 
         hentData();
-
     </script>
-</body>
-
-</html>
+</body></html>
