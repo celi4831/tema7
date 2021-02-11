@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+#splash {
+    background-image: url(russia8.png);
+    background-size: cover;
+    width: 100%;
+    height: 56vh;
+    margin-top: -95px;
+}
+
+#splash h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+body {
+    background-color: #f0f8ff;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    background-color: aliceblue;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.ret-billede img {
+    width: 100%;
+    height: 50vw;
+}

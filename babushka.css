@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0 auto;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+nav {
+    text-align: center;
+}
+
+button {
+    background-color: aliceblue;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+nav. valgt {
+    color: blue;
+    border: blue;
+    border-style: double;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+}
+
+h2 {
+    /*    text-align: center;*/
+    font-family: 'Cinzel', serif;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+article button {
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    background-color: white;
+    padding: 8px 10px;
+    border-radius: 0.5em;
+}
